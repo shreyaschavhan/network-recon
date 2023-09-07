@@ -18,12 +18,13 @@ increasing the efficiency of our attacks/security assessment.
 > Why use whois?
 > - Whois is a TCP service that aims to provide public information about a domain name.
 > - We use this to find the information about the owner/registrar of the domain.
+
 > - Command: 
-```
+```python
 whois
 ```
 > - Example:
-```
+```python
 ┌──(shreyas㉿kali)-[~]
 └─$ whois google.com                                                                    
    Domain Name: GOOGLE.COM
@@ -53,6 +54,56 @@ whois
 
 ```
 
+---
+
+- ipconfig / ifconfig / ip
+> Why do we use them?
+> - They provide details about the network interfaces on the system, including IP addresses, subnet masks, default gateways, DNS servers, and more.
+> - So, we usually use these commands to understand ip configurations of a system.
+> - This can help us:
+>    - Troubleshoot network connectivity issues.
+>    - Configuring and managing network interfaces.
+>    - And more.
+
+> - Commands:
+```python
+Windows: ipconfig
+Linux or Unix-systems: ifconfig / ip a
+```
+
+--- 
+
+- ping
+> Why do we use ping?
+> - Ping is primarily used to test whether a device or host on a network is reachable or not.
+> - It sends a series of ICMP (Internet Control Message Protocol) echo request packets to the target host, and if the host is online and operational, it should respond with ICMP echo reply packets.
+> - Other uses:
+>    -  Ping measures the time it takes for a packet to travel from the source device to the destination host and back. This is also known as Round Trip time (RTT).
+>    -  Detect packet loss.
+>    -  Detect network instability: Consistently high or erratic ping times may indicate network congestion or instability.
+>    -  Ping can also be used to verify DNS resolution.
+
+> - Commands:
+```python
+ping
+```
+> - Example:
+```python
+ping google.com
+
+Pinging google.com [142.250.192.110] with 32 bytes of data:
+Reply from 142.250.192.110: bytes=32 time=24ms TTL=118
+Reply from 142.250.192.110: bytes=32 time=25ms TTL=118
+Reply from 142.250.192.110: bytes=32 time=26ms TTL=118
+Reply from 142.250.192.110: bytes=32 time=24ms TTL=118
+
+Ping statistics for 142.250.192.110:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 24ms, Maximum = 26ms, Average = 24ms
+```
+
+---
 
 
 
