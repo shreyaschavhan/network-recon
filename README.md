@@ -105,5 +105,88 @@ Approximate round trip times in milli-seconds:
 
 ---
 
+- arp
+> Why use arp?
+> - ARP (Address resolution protocol) is responsible for mapping or resolving an IP address (layer 3) to a corresponding physical MAC (Media Access Control) address (layer 2) on a local network.
+> - We use arp to:
+>    - View the ARP cache. What's arp cache? ARP cache is a temporary table of IP addresses and their corresponding MAC address.
+>    - Trouble-shoot problems with not responding devices if you suspect there's a MAC address conflict or ARP cache corruption.
+>    - to discover the MAC address associated with the target device's IP address.
+>    - MAC Address Spoofing Detection by comparing output of arp with already known valid MAC addresses.
+
+> - Command
+```
+arp --help
+```
 
 
+---
+
+- route
+> Why use route?
+> - We use it to view and manage the routing table on a computer or network device.
+
+> - Command
+```
+route print
+```
+
+---
+
+- traceroute / trace / tracert
+> Why do we use traceroute / trace / tracert>
+> - to trace the route that packets take from your computer to a destination host or IP address.
+> - to identify and display the network path, including the intermediate routers or network devices (hops), that data packets traverse to reach the target destination.
+> - It helps us:
+>    - Understand the Network Topology.
+>    - Identify Points of Failure i.e.  identify the specific router or hop where packet loss or latency occurs.
+>    - Verify that our data is taking the intended routing path.
+>    - etc
+
+> - Commnads
+```
+Windows: tracert example.com
+Linux/Unix: traceroute example.com
+```
+> - Example:
+```
+$ tracert google.com
+
+Tracing route to google.com [2404:6800:4009:832::200e]
+over a maximum of 30 hops:
+
+  1     2 ms     1 ms     1 ms  2401:4900:1c8e:3ca4:b6a7:c6ff:fe1f:bcf8
+  2    21 ms    24 ms    37 ms  2401:4900:1c2c:8fff::1
+  3    43 ms    24 ms    21 ms  2404:a800:2a00:101::14d
+  4    28 ms    28 ms    44 ms  2404:a800::167
+  5    26 ms    24 ms    25 ms  2001:4860:1:1::10e0
+  6    30 ms    26 ms    28 ms  2404:6800:80b2::1
+  7     *       24 ms     *     2001:4860:0:1::27e6
+  8     *        *        *     Request timed out.
+  9    28 ms    28 ms    26 ms  2001:4860:0:115d::1
+ 10    26 ms    24 ms    24 ms  2001:4860:0:1::5ecf
+ 11    28 ms    25 ms    29 ms  bom07s45-in-x0e.1e100.net [2404:6800:4009:832::200e]
+
+Trace complete.
+```
+
+---
+
+- nmap
+> Why use nmap?
+> - It's an open-source network scanning and reconnaissance tool.
+> - We use it for various reasons:
+>    - Network Discovery
+>    - Port Scanning
+>    - Operating System Fingerprinting
+>    - Service Version Detection
+>    - Vulnerability Assessment
+>    - Firewall and Security Policy Auditing
+>    - Network Mapping and Topology Analysis
+>    - Scriptable Scans
+>    - etc, etc.
+
+> - Basic Command:
+```
+nmap
+```
