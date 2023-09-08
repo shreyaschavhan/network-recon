@@ -149,7 +149,7 @@ Windows: tracert example.com
 Linux/Unix: traceroute example.com
 ```
 > - Example:
-```
+```python
 $ tracert google.com
 
 Tracing route to google.com [2404:6800:4009:832::200e]
